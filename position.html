@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="pos-r">
+        <h2>relactive</h2>
+        <p>& position: relative &</p>
+        <div>
+            <p>ㄴ상대좌표 = left, right, top, bottom</p>
+            <p>ㄴabsolute와 함께 쓰임</p>
+        </div>
+
+        <div class="ex"> 
+            position:relative;
+            left:100px;
+            top: 100px;
+        </div>
+
+        <div class="ex2"> 
+            <p>부모(relative) -> 자손 OR 후손(absolute)</p>
+            
+        </div>
+    </div>
+    <style>
+        .pos-r .ex{
+            background-color: yellow;
+            position:relative;
+            left:0px;
+            top: 0px;
+        }
+        .pos-r .ex2{
+            position:relative;
+            width: 400px;
+            height: 300px;
+            border: 5px solid aqua;
+        }
+        .pos-r .ex2 > p{
+            position: absolute;
+            bottom: 0; right: 0; 
+            /* top: 0; left: 0;  */
+            background-color: blueviolet;
+            margin: 0;
+        }
+</style>
+    <div class="pos-a">
+        <h2>absolute</h2>
+        <p>& position: absolute &</p>
+        <div>
+            <p>ㄴ상대좌표 = left, right, top, bottom</p>
+            <p>ㄴ브라우저 기준으로 위치값을 설정</p>
+            <p>ㄴ팝업(공지, 이벤트)</p>
+            <p>ㄴ 공중에 컨텐츠가 띄워진다.</p>
+        </div>
+    <div class="ex"> 
+        position:absolute;
+        left:0px;
+        top: 0px;
+        <a> X </a>
+    </div>
+
+    <style>
+        .pos-a{
+            margin: 200px 0;
+        }
+        .pos-a .ex{
+            width: 400px; height: 400px;
+            position: absolute;
+            left: 50%; top: 50%;
+            left: calc(50% - 200px); top: calc(50% - 200px);
+            /* margin: -200px 0 0 -200px; */
+            background-color: gold;
+        }
+        </style>
+
+<div class="pos-f">
+    <h2>fixed</h2>
+    <p>& position: fixed &</p>
+    <div>
+        <p>ㄴ 상대좌표 = left, right, top, bottom</p>
+        <p>ㄴ 브라우저 기준으로 위치값을 설정</p>
+        <p>ㄴ 팝업(공지, 이벤트)</p>
+        <p>ㄴ 공중에 컨텐츠가 띄워진다.</p>
+        <p>ㄴ 헤더, 사이드 배너, 버거메뉴</p>
+        <p>스크롤에 반응하지 않는다.</p>
+    </div>
+    <div class="ex"> 
+    사이드 배너
+    </div>
+</div>
+
+    <style>
+        .pos-f .ex{
+            width: 20px;
+            height: 60px;
+            position: fixed; right: 0; top: 0;
+            background-color: cyan;
+            padding: 50px;
+        }
+    </style>
+
+<div class="self">
+    <img src="./img/img_안개숲.jpg" alt="">
+    <p>이미지 제목</p>
+</div>
+
+<div class="self">
+    <img src="./img/img_ex1.jpg" alt="">
+    <p>이미지 제목</p>
+</div>
+
+<div class="self">
+    <img src="./img/img_ex2.jpg" alt="">
+    <p>이미지 제목</p>
+</div>
+
+<div class="self">
+    <img src="./img/img_ex3.jpg" alt="">
+    <p>이미지 제목</p>
+</div>
+    <style>
+        .self{
+            width: 400px; margin: 100px auto;
+            border: 1px solid black;
+            position: relative;
+        }
+        .self > img{
+            width: 100%;
+            vertical-align: middle;
+        }
+        .self > p{
+            position: absolute;
+            left: 0; bottom: 0;
+            background-color: rgba(255, 0, 0, 0.4);
+            margin: 0;
+            width: 100%;
+            height: 50px;
+            text-align: center;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 1s;
+        }
+        .self:hover > p{
+            height: 100%;
+            }
+    </style>
+</body>
+</html>
